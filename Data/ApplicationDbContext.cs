@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using BikeSparePartsShop.Models;
 
 namespace BikeSparePartsShop.Data
 {
@@ -9,5 +10,9 @@ namespace BikeSparePartsShop.Data
             : base(options)
         {
         }
+        public DbSet<BikeSparePartsShop.Models.Customer> Customer { get; set; }
+        public DbSet<BikeSparePartsShop.Models.Order> Order { get; set; }
+        public DbSet<BikeSparePartsShop.Models.Staff> Staff { get; set; }
+        public DbSet<BikeSparePartsShop.Models.Stock> Stock { get; set; }
     }
 }
