@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="~/BikeSparePartsShop.styles.css" asp-append-version="true" />
 </head>
 <body>
-   
+
 
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">The Bike Shop Database</a>
-                
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -30,19 +30,24 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Customers" asp-action="Create">Enter a Customer</a>
-                            </li> 
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Stocks" asp-action="Create">Enter Some Stock</a>
-                                </li> 
-                                <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Orders" asp-action="Create">Make A Sale </a>
-                                </li> 
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Staffs" asp-action="Index">Staff</a>
-                                    </li>
-                        
-</ul>
- <partial name="_LoginPartial" />
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Stocks" asp-action="Create">Enter Some Stock</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Orders" asp-action="Create">Make A Sale </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Staffs" asp-action="Index">Staff</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/identity/rolesmanager">Roles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/identity/claimsmanager">Claims</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
