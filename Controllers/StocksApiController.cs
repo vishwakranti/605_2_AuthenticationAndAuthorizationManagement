@@ -12,16 +12,16 @@ namespace BikeSparePartsShop.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Stocks1ControllerAPI : ControllerBase
+    public class StocksApiController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
-        public Stocks1ControllerAPI(ApplicationDbContext context)
+        public StocksApiController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Stocks1ControllerAPI
+        // GET: api/StocksApiController
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Stock>>> GetStock()
         {
@@ -32,7 +32,7 @@ namespace BikeSparePartsShop.Controllers
             return await _context.Stock.ToListAsync();
         }
 
-        // GET: api/Stocks1ControllerAPI/5
+        // GET: api/StocksApiController/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Stock>> GetStock(Guid id)
         {
@@ -50,7 +50,7 @@ namespace BikeSparePartsShop.Controllers
             return stock;
         }
 
-        // PUT: api/Stocks1ControllerAPI/5
+        // PUT: api/StocksApiController/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutStock(Guid id, Stock stock)
@@ -81,7 +81,7 @@ namespace BikeSparePartsShop.Controllers
             return NoContent();
         }
 
-        // POST: api/Stocks1ControllerAPI
+        // POST: api/StocksApiController
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Stock>> PostStock(Stock stock)
@@ -96,7 +96,7 @@ namespace BikeSparePartsShop.Controllers
             return CreatedAtAction("GetStock", new { id = stock.StockId }, stock);
         }
 
-        // DELETE: api/Stocks1ControllerAPI/5
+        // DELETE: api/StocksApiController/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteStock(Guid id)
         {

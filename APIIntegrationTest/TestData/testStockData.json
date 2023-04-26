@@ -1,0 +1,282 @@
+[
+  {
+    "stockId": "71f442a6-9a51-413b-a610-03d5ddcb4a10",
+    "productName": "Maxxis Assegai 27.5 x 2.5 Mountain Bike Tire",
+    "productDescription": "The Assegai tire is designed primarily for downhill racing and aggressive trail riding in mixed conditions. The knob height falls between the Minion DHR II and the Shorty. Like the Minion tires, the center knobs are heavily ramped on the leading edge to reduce rolling resistance. A small knob located between the center tread and side knobs provides a smooth transition while cornering. The Assegai offers predictable traction, even over slippery roots and rocks.",
+    "productType": "Tire",
+    "price": 79,
+    "quantity": 100
+  },
+  {
+    "stockId": "7ba9f8a2-3bdc-433c-a996-1c83f41c49d6",
+    "productName": "Giro JAG Cycle Gloves - Black",
+    "productDescription": "The Jag sets a higher standard for entry-level performance cycling gloves, with plush EVA padding that is complemented by Giro’s exceptional Super Fit ergonomic design and high-quality construction. It’s a great choice for riders who want a lightly padded glove with understated style that offers fit and comfort that rival gloves costing twice as much.",
+    "productType": "Gloves",
+    "price": 34,
+    "quantity": 100
+  },
+  {
+    "stockId": "c84a9c41-3f2e-4208-9e5b-222bfb871f50",
+    "productName": "Bike Head Light",
+    "productDescription": "50 Lumen headlight for night riding",
+    "productType": "Headlight",
+    "price": 50,
+    "quantity": 2
+  },
+  {
+    "stockId": "5c3d99e7-7544-4802-bb27-238e6cade6c4",
+    "productName": "OnTrack Puncture Repair Kit",
+    "productDescription": "Dont cut your ride short because of punctures!The OnTrack puncture repair kit has everything needed to get you up and running again.",
+    "productType": "Patch",
+    "price": 3,
+    "quantity": 100
+  },
+  {
+    "stockId": "c843c3d5-b437-48ed-81e8-263d5d2b0e0a",
+    "productName": "Continental Ride Tour 700c Bike Tire",
+    "productDescription": "Anyone looking for a reliable everyday companion will go for a tire with EXTRA PunctureBelt. This rugged rubber breaker, combined with the rubber-reinforced sidewalls of the tire, ensures a high level of puncture protection and sidewall abrasion. Where durability is the main focus, there is also a solid tire version.",
+    "productType": "Tire",
+    "price": 24,
+    "quantity": 100
+  },
+  {
+    "stockId": "983ff789-58b7-459d-b010-2c9c7de3271a",
+    "productName": "Planet Bike Mens A.R.S. Classic Anatomic Saddle - Black",
+    "productDescription": "The A.R.S. Classic has been keeping cyclists comfortable for decades. Its sporty good looks and anatomic relief features give you great comfort and support on short and long rides, alike. Its weather-resistant cover keeps moisture out so you can ride in comfort in any conditions.",
+    "productType": "Saddle",
+    "price": 34,
+    "quantity": 100
+  },
+  {
+    "stockId": "e5dfaf20-97d6-4db8-9c9a-2dced51ba14e",
+    "productName": "Giant 700c Thorn-Resistant Schrader Valve Tube",
+    "productDescription": "Prevent flats with thorn resistant tubes - pesky goathead thorns are a common nuisance on the trails and roads of Southern California ",
+    "productType": "Tube",
+    "price": 14,
+    "quantity": 100
+  },
+  {
+    "stockId": "573d76fd-ef86-4a57-b71a-3480f24cb966",
+    "productName": "Schwalbe Marathon Plus Bike Tire: 27.5 x 1.50\", Wire Bead, Performance Line, Endurance Compound, SmartGuard, Black/Reflect",
+    "productDescription": "The Schwalbe Marathon Tires incorporate light-reflecting sidewalls for better visibility and also utilizes a Silica compound for easy rolling and longer life.",
+    "productType": "Tire",
+    "price": 44,
+    "quantity": 100
+  },
+  {
+    "stockId": "1eb87ea2-5e4b-4957-a1cc-3f8485e7b744",
+    "productName": "Serfas Drifter 27.5\" Bike Tire",
+    "productDescription": "Ride where you want, when you want! One of our most popular tires, the Serfas Drifter bike tire gives you the best of both worlds because it is designed to handle both pavement and light-duty trails.",
+    "productType": "Tire",
+    "price": 35,
+    "quantity": 100
+  },
+  {
+    "stockId": "9a19fff7-b1c6-4bff-a6a8-44712fb19341",
+    "productName": "Maxxis Highroller II Dual EXO/TR 27.5 x 2.3\" Folding Mountain Bike Tire",
+    "productDescription": "The High Roller II has an open and aggressive tread design for excellent soil penetration and mud clearing ability.r",
+    "productType": "Tire",
+    "price": 64,
+    "quantity": 100
+  },
+  {
+    "stockId": "24034884-5819-4543-a0e3-4f60f30551f0",
+    "productName": "Speed Steel Bike Saddle",
+    "productDescription": "This best-selling saddle utilizes a shock absorbing, dual compound Soft-Shell base to provide unparalleled comfort at an excellent value. Supportive padding and mid dimensions make for a near fool-proof favorite at a dont-think-about-it-twice price.",
+    "productType": "Saddle",
+    "price": 44,
+    "quantity": 100
+  },
+  {
+    "stockId": "bb1d75ea-57dc-4a68-96f2-576fd506e31e",
+    "productName": "Serfas DDL-CT Dual Density® Women’s Comfort Bike Seat",
+    "productDescription": "The Serfas® Dual Density® line of saddles is constructed using our patented I.C.S. (Infinite Comfort System) technology. Made up of a soft flexible rubber base followed by two layers of soft and firm closed cell foam, and a final top layer of friction reducing Reactive Gel® covered in moisture-wicking four-way stretch Silk-Tech Lycra.",
+    "productType": "Saddle",
+    "price": 44,
+    "quantity": 100
+  },
+  {
+    "stockId": "8bfa993b-76e6-47d8-a4b2-61ae1d0a9cee",
+    "productName": "Serfas Super Cruiser Bike Saddle",
+    "productDescription": "This thing is HUGE in stature and COMFORT. The Serfas CRS-1 Super Cruiser is the largest saddle available with rails! Features rear elastomer suspension, full suspension base, progressive foam technology, Deep Groove™ Design, heavy duty steel rails, and four-way stretch moisture-wicking Lycra cover.",
+    "productType": "Saddle",
+    "price": 84,
+    "quantity": 100
+  },
+  {
+    "stockId": "497f9ac9-3492-475b-9da1-62bd51cb6219",
+    "productName": "Serfas Hybrid Bike Weatherproof Saddle Pad",
+    "productDescription": "The World’s Most Technologically Advanced Saddle Pad. Lifetime Weatherproof Guarantee.",
+    "productType": "Saddle",
+    "price": 29,
+    "quantity": 100
+  },
+  {
+    "stockId": "69e88ef9-25a0-4c19-9727-6558c7507a36",
+    "productName": "Bontrager Charger Floor Pump - Black",
+    "productDescription": "Nothing slows a cyclist down like an inappropriate amount of tire inflation. Loaded with features like a stable, tip-resistant base, a durable steel barrel, and an auto-select head, the Charger stands ready whenever your tires need a little boost.",
+    "productType": "Pump",
+    "price": 49,
+    "quantity": 100
+  },
+  {
+    "stockId": "371d080d-b923-41d6-9720-718579401436",
+    "productName": "Blackburn Tradesman Multi Tool",
+    "productDescription": "Why has no one invented a multitool that removes chain quick link? Oh wait, we have. All the hex and Torx keys youre ever going to need in a portable tool, with the addition of a disc pad spreader and a tool thatll remove the stubbornest split links.The selection, length and placement of each tool has been carefully thought out so that you have the right tool and can easily use it. Weve included the basic tools needed for quick and easy cockpit and shifting adjustments. Why carry around more bulk than you have to? This product is designed for the minimalist in you. This tool includes T or L handle wrenches that allow you to get a better purchase on bolts. Includes a stylish carrying case, specifically built for this product.",
+    "productType": "Tool",
+    "price": 49,
+    "quantity": 100
+  },
+  {
+    "stockId": "0f055894-8571-4e54-b185-734048f5e020",
+    "productName": "Torpedo7 Double Action Pump",
+    "productDescription": "As the name suggests the double action pumps inflates on both pull and push strokes. With a collection of nozzles this pump from Torpedo7 will always keep you inflated.",
+    "productType": "Pump",
+    "price": 29,
+    "quantity": 100
+  },
+  {
+    "stockId": "23dd95dd-767b-4bcc-944c-7472f73708d2",
+    "productName": "Bike Head Light",
+    "productDescription": "50 Lumen headlight for night riding",
+    "productType": "Headlight",
+    "price": 200,
+    "quantity": 1
+  },
+  {
+    "stockId": "eab05912-1670-4983-bd45-764427ab260e",
+    "productName": "Ultra Cycle Comfort Gel Mountain Bike Seat",
+    "productDescription": "A mountain bike saddle with ergonomic cutout design with a pressure relief zone and comfortable gel layer to keep you comfortable for many miles to come.",
+    "productType": "Saddle",
+    "price": 34,
+    "quantity": 100
+  },
+  {
+    "stockId": "3eb5e2e9-f2ff-4223-bcf2-925c8f27d955",
+    "productName": "Lezyne Smart Patch Kit",
+    "productDescription": "The Lezyne Smart Kit has a low profile polypropylene case makes this patch kit ideal for race situations. The glueless patches conform to inflated tubes with an aggressive adhesive making them a permanent repair. The patch kit instructions have an adhesive backing to serve as emergency tire boot. The kit includes a stainless steel scuffer.",
+    "productType": "Patch",
+    "price": 7,
+    "quantity": 100
+  },
+  {
+    "stockId": "699c3cb5-131a-4562-958f-98f9e70baf1f",
+    "productName": "Giant 700c Presta Valve Bike Tube 80mm w/ Removable Core - 700 x 20-25",
+    "productDescription": "Giants inner tubes are made from high-quality, standard weight rubber so you can keep on rolling.",
+    "productType": "Tube",
+    "price": 9,
+    "quantity": 100
+  },
+  {
+    "stockId": "748535cf-34f5-4ae9-a0a1-9ad3a2d2c91d",
+    "productName": "Topeak Shuttle 1.1 Tyre Lever Set",
+    "productDescription": "Topeak Shuttle 1.1 Tyre Lever set is a set of professional tyre levers; made from engineering grade plastic. They are Rigid, Strong and Durable.They measure just 10.8cm in length and weigh only 28 grams for the pair, so chuck them in a saddle bag, hydration pack or in your jersey pocket.",
+    "productType": "Tool",
+    "price": 14,
+    "quantity": 100
+  },
+  {
+    "stockId": "97712565-23c7-4c09-802e-a0b41af92744",
+    "productName": "Ultra Cycle Mountain Comfort Gel 270 Unisex Vinyl Bike Saddle",
+    "productDescription": "Mountain saddle with ergonomic cutout design, Pressure relief zone, Comfortable gel layer",
+    "productType": "Saddle",
+    "price": 34,
+    "quantity": 100
+  },
+  {
+    "stockId": "1a1b4d65-0ab7-40ca-8200-a341a884ac5b",
+    "productName": "WTB Speed She Womens Bike Saddle",
+    "productDescription": "This female-focused saddle has become one of our most popular models with its ergonomic shape, smooth curves and low-profile stitching. Its wide and rounded, fall-away profile make the Speed She an easy-to-ride, easy-to-maneuver womens saddle.",
+    "productType": "Saddle",
+    "price": 50,
+    "quantity": 100
+  },
+  {
+    "stockId": "d3cfa827-40f9-40e9-ae94-a98166dd9f6f",
+    "productName": "Torpedo7 Multi Tool 20 - Matte Black",
+    "productDescription": "A comprehensive multi tool is a must have item when out on a ride. Whether it be cruising your favourite downhill, or halfway around Taupo, having a multi tool packed away can save you from that emergency phone call or long walk home. Made from aluminium and stainless steel, this Torpedo7 Multi Tool is lightweight and durable, and with it’s compact size, folds away neatly to fit in your caddy or pack.",
+    "productType": "Tool",
+    "price": 44,
+    "quantity": 100
+  },
+  {
+    "stockId": "112149e9-706c-4854-bcf1-b040507552f4",
+    "productName": "Topeak Pocket Shock DXG Shock Bike Pump",
+    "productDescription": "Finished to Topeak’s usual high standards, the DXG shock pump is yet another champion in their stable. A winner of a Eurobike show award in its year of release 2005, the DXG is still at the top of the list when it comes to quality high pressure pumps. Featuring a carbon dial for a bit of bling as well as featuring a bleeder valve and pressure rite connector which makes getting an accurate pressure a breeze and no air loss when removing.",
+    "productType": "Pump",
+    "price": 79,
+    "quantity": 100
+  },
+  {
+    "stockId": "edcb8fb1-54d0-4ba1-97e6-b5fb5703f28f",
+    "productName": "Maxxis Minion DHR II 27.5 x 2.4\" Folding Mountain Bike Tire - Tubeless Ready - Wide",
+    "productDescription": "The Minion DHR Wide Trail has a large volume casing and an all condition tread pattern to deliver maximum control in loose and muddy conditions",
+    "productType": "Tire",
+    "price": 79,
+    "quantity": 100
+  },
+  {
+    "stockId": "dde104cd-3d1d-4b8e-976a-b6038f0c523e",
+    "productName": "WTB Silverado Bike Seat - Steel Rails",
+    "productDescription": "The Silverado is one of WTB’s most iconic and revered saddle shapes. Light-weight and slim, the design oozes speed while proving to be incredibly comfortable. Ride a Silverado and you’ll quickly know what everyone’s raving about.",
+    "productType": "Saddle",
+    "price": 44,
+    "quantity": 100
+  },
+  {
+    "stockId": "faf29273-2009-4718-84e2-c214f38bea8a",
+    "productName": "Giant Contact City+ Unisex Saddle",
+    "productDescription": "Center Zone Cut provides release pressure on the body’s soft tissue areas\r\nLighter, water-resistant seamless synthetic cover",
+    "productType": "Saddle",
+    "price": 44,
+    "quantity": 100
+  },
+  {
+    "stockId": "c8cf42b4-96e6-4067-abe2-c47f52e76892",
+    "productName": "Continental Ultra Gatorskin Bike Tire 700 x 23c",
+    "productDescription": "The Continental Gator skin has been around for quite some time now. While Continental has various other well-respected models in their lineup, the Gatorskin is well known in the biking world for being a rugged, heavy-duty tire made of a durable rubber compound and a puncture-resistant insert that significantly reduces the chances of getting a flat while you are out on your ride.",
+    "productType": "Tire",
+    "price": 54,
+    "quantity": 100
+  },
+  {
+    "stockId": "dc0e8722-d123-475a-b715-cd58a92cc699",
+    "productName": "Topeak Pedal Wrench 15mm",
+    "productDescription": "15mm open end wrench tool for installation, removal and maintenance of pedals. Offset angle keeps knuckles away from crank arms and chainrings. Long padded handle for better leverage and comfortable use",
+    "productType": "Tool",
+    "price": 49,
+    "quantity": 100
+  },
+  {
+    "stockId": "4773e4ac-a66f-486d-9212-d2237bac7531",
+    "productName": "Giant Contact Comfort+ Saddle",
+    "productDescription": "Giants Connect Comfort Saddle is ideal for shorter commutes and weekend fitness rides. It wide base with plush padding makes riding comfortable. Plus, the water-resistant synthetic top and steel rails make this one tough, durable saddle.",
+    "productType": "Saddle",
+    "price": 44,
+    "quantity": 100
+  },
+  {
+    "stockId": "c0a714b3-b6e6-4843-a9bd-d3d1492b15cc",
+    "productName": "Topeak Mini 20 Pro Black Bike Multi Tool",
+    "productDescription": "The lightweight, high-strength forged alloy body resists torque during hard use and its pro-quality hardened steel tools will provide years of service. T10 and T25 Torx bits simplify hydraulic disc brake work. An integrated, cast CrMo chain tool nestles and locks between the tool body forming a low profile, snag-proof shape. The perfect tool for endurance racing, training and touring",
+    "productType": "Tool",
+    "price": 69,
+    "quantity": 100
+  },
+  {
+    "stockId": "54b4088c-d4d4-4a87-a0af-d9ec7cd8bce1",
+    "productName": "Slime Self-Sealing Presta Valve Bike Tube",
+    "productDescription": "Slime self-sealing bike tubes have been saving bike tires for more than 30 years. Coated with Slime tube sealant Slimes self-sealing tubes protect you from nails, thorns and other hazards for up to two years by instantly sealing punctures. Stops punctures from ruining your ride and keeps you going!",
+    "productType": "Tube",
+    "price": 13,
+    "quantity": 100
+  },
+  {
+    "stockId": "a8e6dc83-d35f-48e9-92e1-ebb43810fabc",
+    "productName": "Continental Ultra Sport Bike Tire 700 x 25c",
+    "productDescription": "The Ultra Sport is a road tire built to Continentals exacting standards for the perfect blend of function, weight and puncture resistance. It sports a strong and supple 84 thread-per-inch, 3-ply casing and is at home in all situations, from miles of training to amateur racing to fast centuries.",
+    "productType": "Tire",
+    "price": 24,
+    "quantity": 100
+  }
+]
