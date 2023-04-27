@@ -14,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 //Add services to the builder.
 builder.Services.AddCors(options => options.AddPolicy(name: CORSAllowSpecificOrigins,
-                                                      policy => policy.WithOrigins("http://localhost:7004", "http://www.contoso.com")));
+                                                      policy => policy.WithOrigins("http://localhost:7004", "http://localhost:3000")));
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -44,15 +44,16 @@ const string Permission = "Permission";
 const string ViewRoles = "View Roles";
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy(ViewRolesPolicy, policyBuilder => policyBuilder.RequireAssertion(context =>
+    options.AddPolicy("RoleAdminPolicy", policyBuilder => policyBuilder.RequireRole("Admin"));
+    options.AddPolicy("ClaimAdminPolicy", policyBuilder => policyBuilder.RequireClaim("Admin"));
+    options.AddPolicy("ViewRolesPolicy",policyBuilder => policyBuilder.RequireAssertion( context =>
     {
         //if they have a claim of type "Joining Date" and the value is less than 6 months ago, and
         //they have Permission and View Roles they can view roles
         // We use the FindFirst method to access a claim and obtain its value(if there is one) and convert it to a DateTime
         var joiningDateClaim = context.User.FindFirst(c => c.Type == "Joining Date")?.Value;
-        var joiningDate = Convert.ToDateTime(joiningDateClaim);
-
-        return context.User.HasClaim(Permission, ViewRoles) &&
+        var joiningDate = DateTime.Parse (joiningDateClaim);
+        return context.User.HasClaim("Permission", "ViewRoles") &&
                 joiningDate > DateTime.MinValue && joiningDate < DateTime.Now.AddMonths(-6);
     }));
 });

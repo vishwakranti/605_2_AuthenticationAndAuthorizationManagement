@@ -21,7 +21,7 @@ namespace BikeSparePartsShop.Controllers
             _context = context;
         }
 
-        // GET: api/StocksApiController
+        // GET: api/StocksApi
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Stock>>> GetStock()
         {
@@ -32,7 +32,7 @@ namespace BikeSparePartsShop.Controllers
             return await _context.Stock.ToListAsync();
         }
 
-        // GET: api/StocksApiController/5
+        // GET: api/StocksApi/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Stock>> GetStock(Guid id)
         {
@@ -50,7 +50,7 @@ namespace BikeSparePartsShop.Controllers
             return stock;
         }
 
-        // PUT: api/StocksApiController/5
+        // PUT: api/StocksApi/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutStock(Guid id, Stock stock)
@@ -81,7 +81,7 @@ namespace BikeSparePartsShop.Controllers
             return NoContent();
         }
 
-        // POST: api/StocksApiController
+        // POST: api/StocksApi
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Stock>> PostStock(Stock stock)
@@ -96,7 +96,7 @@ namespace BikeSparePartsShop.Controllers
             return CreatedAtAction("GetStock", new { id = stock.StockId }, stock);
         }
 
-        // DELETE: api/StocksApiController/5
+        // DELETE: api/StocksApi/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteStock(Guid id)
         {
