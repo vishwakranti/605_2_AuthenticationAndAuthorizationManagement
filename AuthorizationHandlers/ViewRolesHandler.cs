@@ -24,7 +24,7 @@ namespace BikeSparePartsShop.AuthorizationHandlers
                     {
                         Console.Write(" HasRolesHandler date " + joiningDate);
                         Console.Write("HasRolesHandler Permission " + context.User.HasClaim("Permission", "View Roles"));
-                        if (context.User.HasClaim(" Permission ", " View Roles "))
+                        if (context.User.HasClaim("Permission", "View Roles"))
                         {
 
                             context.Succeed((IAuthorizationRequirement)req); //they have the permissions

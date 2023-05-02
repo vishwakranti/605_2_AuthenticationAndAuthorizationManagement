@@ -1,10 +1,8 @@
+using BikeSparePartsShop.AuthorizationHandlers;
 using BikeSparePartsShop.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authorization;
-using BikeSparePartsShop.AuthorizationRequirements;
-using BikeSparePartsShop.AuthorizationHandlers;
-using Microsoft.AspNetCore.Builder;
 
 
 const string CORSAllowSpecificOrigins = "_CORSAllowed";
@@ -21,46 +19,83 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
                                                     options.UseSqlServer(connectionString));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
+builder.Services.AddRazorPages();
 //the default identity of the user
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
 // All 3 handlers need to the registered with the service container in program.cs: 
-builder.Services.AddSingleton<IAuthorizationHandler,IsInRoleHandler>();
-builder.Services.AddSingleton<IAuthorizationHandler,HasClaimHandler>();
-builder.Services.AddSingleton<IAuthorizationHandler,ViewRolesHandler>();
+builder.Services.AddSingleton<IAuthorizationHandler, IsInRoleHandler>();
+builder.Services.AddSingleton<IAuthorizationHandler, HasClaimHandler>();
+builder.Services.AddSingleton<IAuthorizationHandler, ViewRolesHandler>();
 
-//Authorization within a Razor Pages application is provided by a number of services, including an IAuthorizationService. T
-//hese must be added to the service container at application startup.
+//Authorization within a Razor Pages application is provided by a number of services, including an IAuthorizationService. 
+//These must be added to the service container at application startup.
 //A convenience method, AddAuthorization takes care of adding all the required services: builder.Services.AddAuthorization();
 
-//Policy constants
-const string ViewRolesPolicy = "ViewRolesPolicy";
-
-//Claims constants
-const string Permission = "Permission";
-const string ViewRoles = "View Roles";
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy("RoleAdminPolicy", policyBuilder => policyBuilder.RequireRole("Admin"));
-    options.AddPolicy("ClaimAdminPolicy", policyBuilder => policyBuilder.RequireClaim("Admin"));
-    options.AddPolicy("ViewRolesPolicy",policyBuilder => policyBuilder.RequireAssertion( context =>
+    //View Roles Policy
+    options.AddPolicy("ViewRolesPolicy", policyBuilder => policyBuilder.RequireAssertion( context =>
     {
+        var canViewRoles = context.User.IsInRole("Staff") && context.User.HasClaim("Permission", "View Roles");
         //if they have a claim of type "Joining Date" and the value is less than 6 months ago, and
         //they have Permission and View Roles they can view roles
         // We use the FindFirst method to access a claim and obtain its value(if there is one) and convert it to a DateTime
         var joiningDateClaim = context.User.FindFirst(c => c.Type == "Joining Date")?.Value;
-        var joiningDate = DateTime.Parse (joiningDateClaim);
-        return context.User.HasClaim("Permission", "ViewRoles") &&
-                joiningDate > DateTime.MinValue && joiningDate < DateTime.Now.AddMonths(-6);
+        if (joiningDateClaim != null)
+            return canViewRoles && DateTime.Parse(joiningDateClaim) > DateTime.MinValue &&
+                                                            DateTime.Parse(joiningDateClaim) < DateTime.Now.AddMonths(-6);
+        else 
+            return false;
     }));
+
+
+    //Can View Claims Policy
+    options.AddPolicy("ViewClaimsPolicy", policyBuilder => policyBuilder.RequireAssertion(context =>
+    {
+        var canViewClaims = context.User.IsInRole("Staff") && context.User.HasClaim("Permission", "View Claims");
+        var joiningDateClaim = context.User.FindFirst(c => c.Type == "Joining Date")?.Value;
+        if (joiningDateClaim != null)
+            return canViewClaims && DateTime.Parse(joiningDateClaim) > DateTime.MinValue &&
+                                                            DateTime.Parse(joiningDateClaim) < DateTime.Now.AddMonths(-6);
+        else 
+            return false;
+
+
+    }));
+
+    //Delete Stock Policy
+    options.AddPolicy("DeleteStock", policyBuilder => policyBuilder.RequireAssertion(context =>
+    {
+        return context.User.IsInRole("Staff") && context.User.HasClaim("Permission", "Delete Stock");
+    }));
+
+    //Edit Stock Policy
+    options.AddPolicy("EditStock", policyBuilder => policyBuilder.RequireAssertion(context =>
+    {
+        return context.User.IsInRole("Staff") && context.User.HasClaim("Permission", "Edit Stock");
+    }));
+
+    //Over18 Add Stock Policy
+    options.AddPolicy("Over18", policyBuilder => policyBuilder.RequireAssertion(context =>
+    {
+        var birthDate = context.User.FindFirst(c => c.Type == "Birth Date")?.Value;
+        if (birthDate != null)
+            return context.User.IsInRole("Staff") &&  (DateTime.Parse(birthDate).Year - DateTime.Now.Year) > 18;
+        else
+            return false;
+    }));
+
+    //Staff Admin Policy
+    options.AddPolicy("StaffAdmin", policyBuilder => policyBuilder.RequireRole("Admin"));
 });
 
 //Having configured the policy we can apply it to the AuthorizeFolder method to ensure that
-//only members of the Admin role can access the content: 
-builder.Services.AddRazorPages(options => options.Conventions.AuthorizeFolder("/Identity/RolesManager", ViewRolesPolicy));
+//only members of that policy can access the content: 
+builder.Services.AddRazorPages(options => options.Conventions.AuthorizeAreaFolder("Identity","/RolesManager", "ViewRolesPolicy"));
+builder.Services.AddRazorPages(options => options.Conventions.AuthorizeAreaFolder("Identity", "/ClaimsManager", "ViewClaimsPolicy"));
 
 //Add Password properties to make it easier for debugging
 builder.Services.Configure<IdentityOptions>(options =>

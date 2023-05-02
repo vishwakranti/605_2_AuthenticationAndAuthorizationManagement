@@ -4,9 +4,7 @@ import Container from "react-bootstrap/Container";
 
 function App() {
   //debugger;
-  const { data, loading, error } = useFetch(
-    "https://localhost:7004/api/stocksapi"
-  );
+  const { data, loading, error } = useFetch("https://localhost:7004/api/stocksapi");
 
   if (error) {
     console.log(error);

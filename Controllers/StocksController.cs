@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BikeSparePartsShop.Data;
 using BikeSparePartsShop.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BikeSparePartsShop.Controllers
 {
@@ -44,6 +45,7 @@ namespace BikeSparePartsShop.Controllers
         }
 
         // GET: Stocks/Create
+        [Authorize(Policy = "Over18")]
         public IActionResult Create()
         {
             return View();
@@ -54,6 +56,7 @@ namespace BikeSparePartsShop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Policy = "Over18")]
         public async Task<IActionResult> Create([Bind("StockId,ProductName,ProductDescription,ProductType,Price,Quantity")] Stock stock)
         {
             if (ModelState.IsValid)
@@ -67,6 +70,7 @@ namespace BikeSparePartsShop.Controllers
         }
 
         // GET: Stocks/Edit/5
+        [Authorize(Policy = "EditStock")]
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null || _context.Stock == null)
@@ -87,6 +91,7 @@ namespace BikeSparePartsShop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Policy = "EditStock")]
         public async Task<IActionResult> Edit(Guid id, [Bind("StockId,ProductName,ProductDescription,ProductType,Price,Quantity")] Stock stock)
         {
             if (id != stock.StockId)
@@ -118,6 +123,7 @@ namespace BikeSparePartsShop.Controllers
         }
 
         // GET: Stocks/Delete/5
+        [Authorize(Policy = "DeleteStock")]
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null || _context.Stock == null)
@@ -138,6 +144,7 @@ namespace BikeSparePartsShop.Controllers
         // POST: Stocks/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Policy = "DeleteStock")]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
             if (_context.Stock == null)

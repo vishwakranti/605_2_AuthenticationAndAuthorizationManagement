@@ -22,7 +22,9 @@ namespace BikeSparePartsShop.Controllers
         // GET: Customers
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Customer.ToListAsync());
+              //return View(await _context.Customer.ToListAsync());
+              var customers = await _context.Customer.ToListAsync();    
+              return View(customers);
         }
 
         // GET: Customers/Details/5

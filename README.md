@@ -7,3 +7,7 @@ Added the given list of Staff into projects ASPNetUsers table via the Identity R
 Created the roles of Admin, Manager, Staff, using the RoleManager interface(As per the saved database name and email)
 Created the Staff User Claims using the claims manager interface.
 Created the different staff policies and applied them
+Generate a WebAPI Framework, add a StockAPIController and install Swagger / Swatchbuckle 
+Created a ReactJs front end that consumes the Web API.
+Outlined the Purpose of CORS
+Created a new Integration Project, name it APIIntergrationTest  

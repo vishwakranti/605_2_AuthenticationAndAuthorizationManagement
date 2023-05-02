@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BikeSparePartsShop.Data;
 using BikeSparePartsShop.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BikeSparePartsShop.Controllers
 {
+    [Authorize(Policy = "StaffAdmin")]
     public class StaffsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -22,7 +24,8 @@ namespace BikeSparePartsShop.Controllers
         // GET: Staffs
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Staff.ToListAsync());
+            var staffList = await _context.Staff.ToListAsync();
+            return View(staffList);
         }
 
         // GET: Staffs/Details/5

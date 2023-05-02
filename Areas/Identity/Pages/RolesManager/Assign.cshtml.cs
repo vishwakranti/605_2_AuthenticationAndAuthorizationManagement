@@ -44,7 +44,7 @@ namespace BikeSparePartsShop.Areas.Identity.Pages.RolesManager
         }
 
         //We declare a private method that assign users and roles to SelectList object 
-        public async Task GetOptions()
+        private async Task GetOptions()
         {
             var roles = await _roleManager.Roles.ToListAsync();
             var users = await _userManager.Users.ToListAsync();
